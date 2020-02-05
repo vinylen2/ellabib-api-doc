@@ -1,14 +1,8 @@
 ---
-title: Swagger Petstore v1.0.0
+title: Ellabib API v1.0.0
 language_tabs:
-  - shell: Shell
-  - http: HTTP
   - javascript: JavaScript
   - javascript--nodejs: Node.JS
-  - ruby: Ruby
-  - python: Python
-  - java: Java
-  - go: Go
 toc_footers:
   - >-
     <a href="https://mermade.github.io/shins/asyncapi.html">See AsyncAPI
