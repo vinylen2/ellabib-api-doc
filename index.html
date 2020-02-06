@@ -126,19 +126,13 @@ window.onpopstate = function() {
 <h1 id="user">User</h1>
 <p>Everything about the authenticated user</p>
 <h2 id="getuser">getUser</h2>
-<p><a id="getUser"></a></p>
+<p><a id="getUserInfo"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight tab tab-javascript"><code><span class="hljs-keyword">var</span> headers = {
-  <span class="hljs-string">'Content-Type'</span>:<span class="hljs-string">'application/json'</span>,
-  <span class="hljs-string">'Authorization'</span>:<span class="hljs-string">'Bearer {access-token}'</span>
-
-};
-
-$.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://petstore.swagger.io/v2/pet'</span>,
-  <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
+<pre class="highlight tab tab-javascript"><code>$.ajax({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://api.ellabib.se/user/id/:id'</span>,
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
   <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
@@ -150,65 +144,31 @@ $.ajax({
 <p><code>GET /user</code></p>
 <p><em>Get user info</em></p>
 <blockquote>
-<p>Body parameter</p>
+<p>Example response</p>
 </blockquote>
 <pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"category"</span>: {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>
-  },
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"doggie"</span>,
-  <span class="hljs-attr">"photoUrls"</span>: [
-    <span class="hljs-string">"string"</span>
-  ],
-  <span class="hljs-attr">"tags"</span>: [
-    {
-      <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>
-    }
-  ],
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"available"</span>
+    <span class="hljs-attr">"data"</span>: [
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Gabriel"</span>,
+            <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Wallén"</span>,
+            <span class="hljs-attr">"extId"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"admin"</span>,
+            <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"Administratör"</span>,
+            <span class="hljs-attr">"pagesRead"</span>: <span class="hljs-string">"235"</span>,
+            <span class="hljs-attr">"booksRead"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"classDisplayName"</span>: <span class="hljs-string">"1A"</span>,
+            <span class="hljs-attr">"classId"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"avatarId"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"avatarImageUrl"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"avatarDisplayName"</span>: <span class="hljs-string">"Vanlig"</span>,
+            <span class="hljs-attr">"avatarType"</span>: <span class="hljs-string">"basic"</span>
+        }
+    ]
 }
+
 </code></pre>
-<pre class="highlight tab tab-xml"><code><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span> <span class="hljs-meta">?&gt;</span></span>
-<span class="hljs-tag">&lt;<span class="hljs-name">Pet</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">category</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">category</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>doggie<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">photoUrls</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">photoUrls</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tags</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">tags</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">status</span>&gt;</span>available<span class="hljs-tag">&lt;/<span class="hljs-name">status</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">Pet</span>&gt;</span>
-</code></pre>
-<h3 id="addpet-parameters">Parameters</h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>body</td>
-<td>body</td>
-<td><a href="#schemapet">Pet</a></td>
-<td>true</td>
-<td>Pet object that needs to be added to the store</td>
-</tr>
-</tbody>
-</table>
-<h3 id="addpet-responses">Responses</h3>
+<h3 id="getuser-responses">Responses</h3>
 <table>
 <thead>
 <tr>
@@ -220,10 +180,36 @@ $.ajax({
 </thead>
 <tbody>
 <tr>
+<td>200</td>
+<td>OK</td>
+<td>succesful operation</td>
+<td>Inline</td>
+</tr>
+<tr>
 <td>405</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.5">Method Not Allowed</a></td>
 <td>Invalid input</td>
 <td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getuser-responseschema">Response Schema</h3>
+<p>Status code 200</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>true</td>
+<td>Unique ID for user</td>
 </tr>
 </tbody>
 </table>

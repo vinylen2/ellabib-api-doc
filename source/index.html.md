@@ -27,21 +27,15 @@ Everything about the authenticated user
 
 ## getUser
 
-<a id="getUser"></a>
+<a id="getUserInfo"></a>
 
 > Code samples
 
 
 ```javascript
-var headers = {
-  'Content-Type':'application/json',
-  'Authorization':'Bearer {access-token}'
-
-};
-
 $.ajax({
-  url: 'http://petstore.swagger.io/v2/pet',
-  method: 'post',
+  url: 'http://api.ellabib.se/user/id/:id',
+  method: 'get',
 
   headers: headers,
   success: function(data) {
@@ -56,58 +50,44 @@ $.ajax({
 
 *Get user info*
 
-> Body parameter
+> Example response
 
 ```json
 {
-  "id": 0,
-  "category": {
-    "id": 0,
-    "name": "string"
-  },
-  "name": "doggie",
-  "photoUrls": [
-    "string"
-  ],
-  "tags": [
-    {
-      "id": 0,
-      "name": "string"
-    }
-  ],
-  "status": "available"
+    "data": [
+        {
+            "id": 1,
+            "firstName": "Gabriel",
+            "lastName": "Wallén",
+            "extId": null,
+            "type": "admin",
+            "displayName": "Administratör",
+            "pagesRead": "235",
+            "booksRead": 2,
+            "classDisplayName": "1A",
+            "classId": 1,
+            "avatarId": 1,
+            "avatarImageUrl": null,
+            "avatarDisplayName": "Vanlig",
+            "avatarType": "basic"
+        }
+    ]
 }
+
 ```
-
-```xml
-<?xml version="1.0" encoding="UTF-8" ?>
-<Pet>
-  <id>0</id>
-  <category>
-    <id>0</id>
-    <name>string</name>
-  </category>
-  <name>doggie</name>
-  <photoUrls>string</photoUrls>
-  <tags>
-    <id>0</id>
-    <name>string</name>
-  </tags>
-  <status>available</status>
-</Pet>
-```
-
-<h3 id="addPet-parameters">Parameters</h3>
-
-|Parameter|In|Type|Required|Description|
-|---|---|---|---|---|
-|body|body|[Pet](#schemapet)|true|Pet object that needs to be added to the store|
-
-<h3 id="addPet-responses">Responses</h3>
+<h3 id="getUser-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
+|200|OK|succesful operation|Inline|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Invalid input|None|
+
+<h3 id="getUser-responseSchema">Response Schema</h3>
+
+Status code 200
+|Name|Type|Required|Description|
+|---|---|---|---|
+|id|integer|true|Unique ID for user|
 
 <aside class="warning">
 To perform this operation, you must be authenticated by means of one of the following methods:
