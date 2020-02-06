@@ -94,6 +94,68 @@ To perform this operation, you must be authenticated by means of one of the foll
 petstore_auth ( Scopes: write:pets read:pets )
 </aside>
 
+<h1 id="schoolUnit">School Unit</h1>
+
+Get data about school units
+
+## getSchoolUnit
+
+<a id="getSchoolUnitInfo"></a>
+
+> Code samples
+
+
+```javascript
+$.ajax({
+  url: 'http://api.ellabib.se/schoolunit',
+  method: 'get',
+
+  headers: headers,
+  success: function(data) {
+    console.log(JSON.stringify(data));
+  }
+})
+
+```
+
+
+`GET /schoolunit`
+
+*Get school unit info*
+
+> Example response
+
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "displayName": "Ellagårdsskolan",
+            "pagesRead": "267",
+            "booksRead": 3
+        }
+    ]
+}
+```
+<h3 id="getSchoolUnit-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|OK|succesful operation|Inline|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Invalid input|None|
+
+<h3 id="getSchoolUnit-responseSchema">Response Schema</h3>
+
+Status code 200
+|Name|Type|Required|Description|
+|---|---|---|---|
+|id|integer|true|Unique ID for schoolUnit|
+
+<aside class="warning">
+To perform this operation, you must be authenticated by means of one of the following methods:
+petstore_auth ( Scopes: write:pets read:pets )
+</aside>
+
 
 # Schemas
 
