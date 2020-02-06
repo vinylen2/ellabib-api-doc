@@ -89,11 +89,6 @@ Status code 200
 |---|---|---|---|
 |id|integer|true|Unique ID for user|
 
-<aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-petstore_auth ( Scopes: write:pets read:pets )
-</aside>
-
 <h1 id="schoolUnit">School Unit</h1>
 
 Get data about school units
@@ -150,48 +145,6 @@ Status code 200
 |Name|Type|Required|Description|
 |---|---|---|---|
 |id|integer|true|Unique ID for schoolUnit|
-
-<aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-petstore_auth ( Scopes: write:pets read:pets )
-</aside>
-
-
-# Schemas
-
-<h2 id="tocSorder">Order</h2>
-
-<a id="schemaorder"></a>
-
-```json
-{
-  "id": 0,
-  "petId": 0,
-  "quantity": 0,
-  "shipDate": "2018-04-24T13:02:08Z",
-  "status": "placed",
-  "complete": false
-}
-```
-
-### Properties
-
-|Name|Type|Required|Description|
-|---|---|---|---|
-|id|integer(int64)|false|No description|
-|petId|integer(int64)|false|No description|
-|quantity|integer(int32)|false|No description|
-|shipDate|string(date-time)|false|No description|
-|status|string|false|Order Status|
-|complete|boolean|false|No description|
-
-#### Enumerated Values
-
-|Property|Value|
-|---|---|
-|status|placed|
-|status|approved|
-|status|delivered|
 
 
 <script type="application/ld+json">
