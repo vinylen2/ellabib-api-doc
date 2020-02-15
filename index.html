@@ -91,6 +91,20 @@ window.onpopstate = function() {
           </li>
         
           <li>
+            <a href="#classes" class="toc-h1 toc-link" data-title="Classes">Classes</a>
+            
+              <ul class="toc-list-h2">
+                
+                  <li>
+                    <a href="#getclasses" class="toc-h2 toc-link" data-title="">getClasses</a>
+                    
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
             <a href="#schoolunit" class="toc-h1 toc-link" data-title="School Unit">School Unit</a>
             
               <ul class="toc-list-h2">
@@ -133,13 +147,7 @@ window.onpopstate = function() {
 <pre class="highlight tab tab-javascript"><code>$.ajax({
   <span class="hljs-attr">url</span>: <span class="hljs-string">'http://api.ellabib.se/user/id/:id'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
-
-  <span class="hljs-attr">headers</span>: headers,
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(data));
-  }
 })
-
 </code></pre>
 <p><code>GET /user</code></p>
 <p><em>Get user info</em></p>
@@ -213,6 +221,85 @@ window.onpopstate = function() {
 </tr>
 </tbody>
 </table>
+<h1 id="classes">Classes</h1>
+<h2 id="getclasses">getClasses</h2>
+<p><a id="getClassesInfo"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-javascript"><code>$.ajax({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://api.ellabib.se/classes'</span>,
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
+})
+</code></pre>
+<p><code>GET /classes</code></p>
+<p><em>Get classes info</em></p>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>{
+    <span class="hljs-attr">"data"</span>: [
+        {
+            <span class="hljs-attr">"pagesRead"</span>: <span class="hljs-string">"155"</span>,
+            <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"1A"</span>,
+            <span class="hljs-attr">"booksRead"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>
+            },
+        {
+            <span class="hljs-attr">"pagesRead"</span>: <span class="hljs-string">"140"</span>,
+            <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"2A"</span>,
+            <span class="hljs-attr">"booksRead"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>
+        }
+    ]
+}
+
+</code></pre>
+<h3 id="getclasses-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>succesful operation</td>
+<td>Inline</td>
+</tr>
+<tr>
+<td>405</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.5">Method Not Allowed</a></td>
+<td>Invalid input</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getclasses-responseschema">Response Schema</h3>
+<p>Status code 200</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>true</td>
+<td>Unique ID for user</td>
+</tr>
+</tbody>
+</table>
 <h1 id="schoolunit">School Unit</h1>
 <p>Get data about school units</p>
 <h2 id="getschoolunit">getSchoolUnit</h2>
@@ -223,11 +310,6 @@ window.onpopstate = function() {
 <pre class="highlight tab tab-javascript"><code>$.ajax({
   <span class="hljs-attr">url</span>: <span class="hljs-string">'http://api.ellabib.se/schoolunit'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
-
-  <span class="hljs-attr">headers</span>: headers,
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(data));
-  }
 })
 
 </code></pre>

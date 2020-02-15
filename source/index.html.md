@@ -36,15 +36,8 @@ Everything about the authenticated user
 $.ajax({
   url: 'http://api.ellabib.se/user/id/:id',
   method: 'get',
-
-  headers: headers,
-  success: function(data) {
-    console.log(JSON.stringify(data));
-  }
 })
-
 ```
-
 
 `GET /user`
 
@@ -89,9 +82,65 @@ Status code 200
 |---|---|---|---|
 |id|integer|true|Unique ID for user|
 
+<h1 id="classes">Classes</h1>
+
+## getClasses
+
+<a id="getClassesInfo"></a>
+
+> Code samples
+
+
+```javascript
+$.ajax({
+  url: 'http://api.ellabib.se/classes',
+  method: 'get',
+})
+```
+
+`GET /classes`
+
+*Get classes info*
+
+> Example response
+
+```json
+{
+    "data": [
+        {
+            "pagesRead": "155",
+            "displayName": "1A",
+            "booksRead": 1,
+            "id": 1
+            },
+        {
+            "pagesRead": "140",
+            "displayName": "2A",
+            "booksRead": 1,
+            "id": 2
+        }
+    ]
+}
+
+```
+<h3 id="getClasses-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|OK|succesful operation|Inline|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Invalid input|None|
+
+<h3 id="getClasses-responseSchema">Response Schema</h3>
+
+Status code 200
+|Name|Type|Required|Description|
+|---|---|---|---|
+|id|integer|true|Unique ID for user|
+
 <h1 id="schoolUnit">School Unit</h1>
 
 Get data about school units
+
 
 ## getSchoolUnit
 
@@ -104,11 +153,6 @@ Get data about school units
 $.ajax({
   url: 'http://api.ellabib.se/schoolunit',
   method: 'get',
-
-  headers: headers,
-  success: function(data) {
-    console.log(JSON.stringify(data));
-  }
 })
 
 ```
