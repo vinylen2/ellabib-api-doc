@@ -53,19 +53,21 @@ $.ajax({
             "firstName": "Gabriel",
             "lastName": "Wallén",
             "extId": null,
-            "type": "admin",
-            "displayName": "Administratör",
-            "pagesRead": "235",
-            "booksRead": 2,
+            "roleType": "admin",
+            "roleDisplayName": "Administratör",
+            "pagesRead": "155",
+            "booksRead": 1,
+            "reviewsWritten": "1",
             "classDisplayName": "1A",
             "classId": 1,
             "avatarId": 1,
-            "avatarImageUrl": null,
-            "avatarDisplayName": "Vanlig",
-            "avatarType": "basic"
+            "avatarImageUrl": "https://ellabib.se/images/avatar-1.png",
+            "avatarDisplayName": "basic",
+            "avatarType": "avatar-1"
         }
     ]
 }
+
 
 ```
 <h3 id="getUser-responses">Responses</h3>
