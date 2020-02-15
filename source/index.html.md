@@ -113,12 +113,14 @@ $.ajax({
             "pagesRead": "155",
             "displayName": "1A",
             "booksRead": 1,
+            "reviewsWritten": "1",
             "id": 1
             },
         {
             "pagesRead": "140",
             "displayName": "2A",
             "booksRead": 1,
+            "reviewsWritten": "1",
             "id": 2
         }
     ]
@@ -173,6 +175,7 @@ $.ajax({
             "id": 1,
             "displayName": "Ellagårdsskolan",
             "pagesRead": "267",
+            "reviewsWritten": "1",
             "booksRead": 3
         }
     ]
