@@ -84,6 +84,64 @@ Status code 200
 |---|---|---|---|
 |id|integer|true|Unique ID for user|
 
+<h1 id="avatar">Avatars</h1>
+
+Everything about avatars
+
+## getAllAvatars
+
+<a id="getAvatars"></a>
+
+> Code samples
+
+
+```javascript
+$.ajax({
+  url: 'http://api.ellabib.se/avatar',
+  method: 'get',
+})
+
+```
+
+
+`GET /avatar`
+
+*Get info for all avatars*
+
+> Example response
+
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "type": "avatar-1",
+            "imageUrl": "https://ellabib.se/images/avatar-1.png",
+            "displayName": "basic"
+        },
+        {
+            "id": 2,
+            "type": "avatar-2",
+            "imageUrl": "https://ellabib.se/images/avatar-2.png",
+            "displayName": "basic"
+        },
+    ]
+}
+```
+<h3 id="getAllAvatars-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|OK|succesful operation|Inline|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Invalid input|None|
+
+<h3 id="getAllAvatars-responseSchema">Response Schema</h3>
+
+Status code 200
+|Name|Type|Required|Description|
+|---|---|---|---|
+|id|integer|true|Unique ID for schoolUnit|
+
 <h1 id="classes">Classes</h1>
 
 ## getClasses

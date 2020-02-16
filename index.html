@@ -91,6 +91,20 @@ window.onpopstate = function() {
           </li>
         
           <li>
+            <a href="#avatar" class="toc-h1 toc-link" data-title="Avatars">Avatars</a>
+            
+              <ul class="toc-list-h2">
+                
+                  <li>
+                    <a href="#getallavatars" class="toc-h2 toc-link" data-title="">getAllAvatars</a>
+                    
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
             <a href="#classes" class="toc-h1 toc-link" data-title="Classes">Classes</a>
             
               <ul class="toc-list-h2">
@@ -220,6 +234,86 @@ window.onpopstate = function() {
 <td>integer</td>
 <td>true</td>
 <td>Unique ID for user</td>
+</tr>
+</tbody>
+</table>
+<h1 id="avatar">Avatars</h1>
+<p>Everything about avatars</p>
+<h2 id="getallavatars">getAllAvatars</h2>
+<p><a id="getAvatars"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight tab tab-javascript"><code>$.ajax({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://api.ellabib.se/avatar'</span>,
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
+})
+
+</code></pre>
+<p><code>GET /avatar</code></p>
+<p><em>Get info for all avatars</em></p>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight tab tab-json"><code>{
+    <span class="hljs-attr">"data"</span>: [
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"avatar-1"</span>,
+            <span class="hljs-attr">"imageUrl"</span>: <span class="hljs-string">"https://ellabib.se/images/avatar-1.png"</span>,
+            <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"basic"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"avatar-2"</span>,
+            <span class="hljs-attr">"imageUrl"</span>: <span class="hljs-string">"https://ellabib.se/images/avatar-2.png"</span>,
+            <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"basic"</span>
+        },
+    ]
+}
+</code></pre>
+<h3 id="getallavatars-responses">Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>succesful operation</td>
+<td>Inline</td>
+</tr>
+<tr>
+<td>405</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.5">Method Not Allowed</a></td>
+<td>Invalid input</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getallavatars-responseschema">Response Schema</h3>
+<p>Status code 200</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>true</td>
+<td>Unique ID for schoolUnit</td>
 </tr>
 </tbody>
 </table>
