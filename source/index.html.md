@@ -84,6 +84,58 @@ Status code 200
 |---|---|---|---|
 |id|integer|true|Unique ID for user|
 
+## updateAvatar
+
+<a id="updateAvatar"></a>
+
+> Code samples
+
+
+```javascript
+$.ajax({
+  url: 'http://api.ellabib.se/user/avatar',
+  method: 'patch',
+})
+```
+
+> Body parameter
+
+
+```javascript
+{
+    "avatarId": 1,
+    "userId": 1
+}
+```
+
+`PATCH /user/avatar`
+
+*Patch avatar info*
+
+> Example response
+
+```json
+{
+    "data": {
+        "avatarId": "2"
+    },
+    "message": "User updated"
+}
+```
+<h3 id="updateAvatar-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|OK|succesful operation|Inline|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Invalid input|None|
+
+<h3 id="updateAvatar-responseSchema">Response Schema</h3>
+
+Status code 200
+|Name|Type|Required|Description|
+|---|---|---|---|
+|id|integer|true|Unique ID for user|
+
 <h1 id="avatar">Avatars</h1>
 
 Everything about avatars
