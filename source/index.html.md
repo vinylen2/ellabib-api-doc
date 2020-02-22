@@ -182,6 +182,67 @@ $.ajax({
 
 <h3 id="updateAvatar-responseSchema">Response Schema</h3>
 
+## getLatestReads
+
+<a id="getLatestReads"></a>
+
+> Code samples
+
+
+```javascript
+$.ajax({
+  url: 'http://api.ellabib.se/user/latest-reads/:id',
+  method: 'get',
+})
+```
+
+`GET /latest-reads`
+
+*Get the five latest reads from a user*
+
+> Example response
+
+```json
+{
+    "data": [
+        {
+            "id": 33,
+            "slug": "campingmysteriet",
+            "imageurl": "https://media.bonnierforlagen.se/bokbilder/b/9789163857089.jpg?timestamp=20190207102810\r\n",
+            "title": "campingmysteriet",
+            "pages": 89,
+            "rating": 4,
+            "simple": 0,
+            "createdat": "2017-10-28t08:32:35.000z"
+        },
+        {
+            "id": 5,
+            "slug": "julian-jim",
+            "imageurl": "https://bilder.norstedts.se/bilder/omslag/224/8887902x_o_1.jpg?timestamp=201202170945\r\n",
+            "title": "julian & jim",
+            "pages": 155,
+            "rating": 4,
+            "simple": 0,
+            "createdat": "2017-10-06t21:31:07.000z"
+        }
+    ]
+}
+
+```
+<h3 id="getLatestReads-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|OK|succesful operation|Inline|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Invalid input|None|
+
+<h3 id="getLatestReads-responseSchema">Response Schema</h3>
+
+Status code 200
+|Name|Type|Required|Description|
+|---|---|---|---|
+|id|integer|true|Unique ID for user|
+
 Status code 200
 |Name|Type|Required|Description|
 |---|---|---|---|
