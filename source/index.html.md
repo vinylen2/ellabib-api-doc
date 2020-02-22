@@ -63,7 +63,9 @@ $.ajax({
             "avatarId": 1,
             "avatarImageUrl": "https://ellabib.se/images/avatar-1.png",
             "avatarDisplayName": "basic",
-            "avatarType": "avatar-1"
+            "avatarType": "avatar-1",
+            "schoolUnitId": 1,
+            "schoolUnitDisplayName": "Ellagårdsskolan"
         }
     ]
 }
