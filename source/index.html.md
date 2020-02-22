@@ -84,6 +84,55 @@ Status code 200
 |---|---|---|---|
 |id|integer|true|Unique ID for user|
 
+## getFavouriteGenre
+
+<a id="getFavouriteGenre"></a>
+
+> Code samples
+
+
+```javascript
+$.ajax({
+  url: 'http://api.ellabib.se/user/favourite-genre/:id',
+  method: 'get',
+})
+```
+
+`GET /favouriteGenre`
+
+*Get favourite genre from user*
+
+> Example response
+
+```json
+{
+    "data": {
+        "favouriteGenre": {
+        "genreId": 8,
+        "name": "Spänning",
+        "slug": "spanning",
+        "userCount": 1,
+        "userId": 1
+        }
+    }
+}
+
+
+```
+<h3 id="getFavouriteGenre-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|OK|succesful operation|Inline|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Invalid input|None|
+
+<h3 id="getFavouriteGenre-responseSchema">Response Schema</h3>
+
+Status code 200
+|Name|Type|Required|Description|
+|---|---|---|---|
+|id|integer|true|Unique ID for user|
+
 ## updateAvatar
 
 <a id="updateAvatar"></a>
