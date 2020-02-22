@@ -213,7 +213,7 @@ $.ajax({
             "pages": 89,
             "rating": 4,
             "simple": 0,
-            "createdat": "2017-10-28t08:32:35.000z"
+            "createdAt": "2017-10-28t08:32:35.000z"
         },
         {
             "id": 5,
@@ -223,7 +223,7 @@ $.ajax({
             "pages": 155,
             "rating": 4,
             "simple": 0,
-            "createdat": "2017-10-06t21:31:07.000z"
+            "createdAt": "2017-10-06t21:31:07.000z"
         }
     ]
 }
