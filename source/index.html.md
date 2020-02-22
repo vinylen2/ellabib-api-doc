@@ -108,11 +108,11 @@ $.ajax({
 {
     "data": {
         "favouriteGenre": {
-        "genreId": 8,
-        "name": "Spänning",
-        "slug": "spanning",
-        "userCount": 1,
-        "userId": 1
+            "genreId": 8,
+            "name": "Spänning",
+            "slug": "spanning",
+            "userCount": 1,
+            "userId": 1
         }
     }
 }
