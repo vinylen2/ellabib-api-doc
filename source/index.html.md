@@ -47,27 +47,25 @@ $.ajax({
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "firstName": "Gabriel",
-            "lastName": "Wallén",
-            "extId": null,
-            "roleType": "admin",
-            "roleDisplayName": "Administratör",
+    "data": {
+        "pagesRead": "244",
+        "booksRead": 2,
+        "reviewsWritten": "2",
+        "class": {
             "pagesRead": "155",
+            "displayName": "1A",
             "booksRead": 1,
             "reviewsWritten": "1",
-            "classDisplayName": "1A",
-            "classId": 1,
-            "avatarId": 1,
-            "avatarImageUrl": "https://ellabib.se/images/avatar-1.png",
-            "avatarDisplayName": "basic",
-            "avatarType": "avatar-1",
-            "schoolUnitId": 1,
-            "schoolUnitDisplayName": "Ellagårdsskolan"
+            "id": 1
+        },
+        "schoolUnit": {
+            "id": 1,
+            "displayName": "Ellagårdsskolan",
+            "pagesRead": "450",
+            "reviewsWritten": "3",
+            "booksRead": 3
         }
-    ]
+    }
 }
 
 
